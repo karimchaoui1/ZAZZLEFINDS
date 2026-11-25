@@ -1,159 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Curated Designs, Wedding Essentials &amp; Personalized Finds</title>
-<meta name="description" content="Explore hand-picked trending collections you can customize or order directly on Zazzle.">
-<meta property="og:title" content="Curated Designs, Wedding Essentials &amp; Personalized Finds">
-<meta property="og:description" content="Explore hand-picked trending collections you can customize or order directly on Zazzle.">
-<meta property="og:image" content="https://rlv.zcache.com/modern_script_elegant_wedding_photo_save_the_date-r_w3utfp_1000.jpg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Curated Finds – Today's Bestseller Collections</title>
+<meta name="description" content="Browse curated collections of live bestsellers: seasonal gifts, cards, invitations and more. Special promo discounts available on Zazzle.">
+<meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://zazzlefinds.netlify.app/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#FAF9F6;color:#1c1917}
-.font-display{font-family:'Playfair Display',Georgia,serif}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-.zse-snap{-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.zse-snap::-webkit-scrollbar{display:none}
-.zse-pill{white-space:nowrap;flex-shrink:0;border:1px solid #e7e5e4;background:#fff;color:#44403c;border-radius:999px;padding:.6rem 1.15rem;font-weight:700;font-size:.85rem;cursor:pointer;transition:all .2s ease}
-.zse-pill:hover{border-color:#1c1917}
-.zse-pill.active{background:#1c1917;color:#fff;border-color:#1c1917}
-.zse-card{animation:zsefade .35s ease both}
-.zse-card.is-hidden{display:none}
-@keyframes zsefade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-</style>
+<meta property="og:title" content="Curated Finds – Today's Bestseller Collections">
+<style>:root{--ivory:#FBF6EA;--ink:#2B2118;--muted:#7A6A58;--gold:#B7863A;--line:#EDE2CC;--card:#fff}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ivory);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.top{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:20px;font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:.3px}
+.back{font-size:13px;color:var(--gold);text-decoration:none;font-weight:700}
+.hero{text-align:center;padding:38px 18px 18px;max-width:860px;margin:0 auto}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,6vw,48px);line-height:1.12;margin:10px 0 12px}
+.sub{color:var(--muted);margin:0 auto 18px;max-width:620px}
+.promo{display:inline-block;background:linear-gradient(135deg,#FFEBD6,#FFD9B3);color:#9A3412;border:1px solid #F7C089;padding:10px 16px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.02em}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.sec{margin:34px 0 8px}.sec h2{font-family:Georgia,"Times New Roman",serif;font-size:26px;margin:0}.sec p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.hint{font-size:12px;color:var(--gold);font-weight:700}
+.swipe{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 2px 18px;-webkit-overflow-scrolling:touch}
+.swipe .card{flex:0 0 80%;scroll-snap-align:center}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(80,55,20,.07);display:flex;flex-direction:column}
+.card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#f3ead8}
+.rank{position:absolute;top:10px;left:10px;background:var(--ink);color:#fff;border-radius:999px;font-size:12px;font-weight:800;padding:4px 10px;z-index:2}
+.body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{font-size:15px;line-height:1.3;margin:0;font-weight:600}
+.meta{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted)}.price{color:var(--ink);font-weight:800}
+.btn{display:block;text-align:center;background:linear-gradient(135deg,#D9A441,#B7863A);color:#fff;text-decoration:none;font-weight:800;padding:12px 14px;border-radius:12px;margin-top:auto;border:0;cursor:pointer;font-size:15px}
+.btn:hover{filter:brightness(1.06)}
+.cta{text-align:center;margin:30px 0 0}.cta .btn{display:inline-block;padding:14px 26px}
+footer{margin-top:46px;padding:26px 18px;background:#fff;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;text-align:center}
+footer p{max-width:760px;margin:6px auto}
+.search{display:block;width:100%;max-width:460px;margin:6px auto 0;padding:13px 16px;border:1px solid var(--line);border-radius:999px;font-size:15px;background:#fff}
+.hubgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+.hubcard{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 8px 24px rgba(80,55,20,.07);display:flex;flex-direction:column}
+.hubcard img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#f3ead8}
+.hubcard .b{padding:12px 14px 16px}.hubcard h3{font-family:Georgia,"Times New Roman",serif;font-size:16px;margin:0 0 6px;line-height:1.25}
+.hubcard span{font-size:12.5px;color:var(--gold);font-weight:800}
+.empty{text-align:center;color:var(--muted);padding:40px 0}
+.vip{position:fixed;inset:0;background:rgba(43,33,24,.55);display:flex;align-items:center;justify-content:center;padding:18px;z-index:99}
+.vip[hidden]{display:none}
+.vip-card{position:relative;background:#fff;border-radius:22px;max-width:380px;width:100%;padding:28px 24px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.vip-card h3{font-family:Georgia,"Times New Roman",serif;font-size:24px;margin:0 0 8px}.vip-card p{color:var(--muted);margin:0 0 16px}
+.vip-card .x{position:absolute;top:8px;right:12px;background:none;border:0;font-size:26px;cursor:pointer;color:var(--muted)}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}.swipe .card{flex-basis:46%}.hubgrid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(4,1fr)}.swipe{overflow:visible;display:grid;grid-template-columns:repeat(3,1fr)}.swipe .card{flex:none}.hint{display:none}.hubgrid{grid-template-columns:repeat(4,1fr)}}</style>
 </head>
-<body class="antialiased pb-24 md:pb-0">
-
-<header>
-	<div class="max-w-5xl mx-auto px-5 pt-10 md:pt-16 pb-6 md:pb-10 text-center">
-		<span class="inline-block bg-white border border-amber-200 text-amber-700 text-xs font-bold tracking-widest px-4 py-2 rounded-full shadow-sm">✨ HAND-PICKED TRENDING COLLECTIONS</span>
-		<h1 class="font-display text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mt-5 md:mt-6 mb-4 md:mb-5">Curated Designs, Wedding Essentials &amp; Personalized Finds</h1>
-		<p class="text-lg text-stone-600 max-w-2xl mx-auto">Explore hand-picked trending collections you can customize or order directly on Zazzle</p>
-		<div class="max-w-xl mx-auto mt-8 relative">
-			<input id="zse-search" type="search" autocomplete="off" placeholder="Search collections (e.g. boho wedding, coffee mugs)…" class="w-full rounded-full border border-stone-200 bg-white px-6 py-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-rose-300 text-stone-800 text-base" style="font-size:16px" aria-label="Search collections">
-		</div>
-	</div>
-</header>
-
-<section class="max-w-6xl mx-auto px-5">
-	<div class="sticky top-0 z-30 -mx-5 px-5 py-3 mb-5 md:static md:mx-0 md:px-0 md:mb-10" style="background:rgba(250,249,246,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">
-		<div class="zse-snap flex flex-nowrap gap-2 overflow-x-auto md:flex-wrap md:justify-center md:overflow-visible" id="zse-pills">
-			<button type="button" class="zse-pill active" data-cat="all">All Collections</button>
-						<button type="button" class="zse-pill" data-cat="Wedding">Wedding</button>
-						<button type="button" class="zse-pill" data-cat="Home &amp; Decor">Home &amp; Decor</button>
-						<button type="button" class="zse-pill" data-cat="Gifts &amp; Mugs">Gifts &amp; Mugs</button>
-						<button type="button" class="zse-pill" data-cat="Party &amp; Events">Party &amp; Events</button>
-						<button type="button" class="zse-pill" data-cat="Lifestyle &amp; Accessories">Lifestyle &amp; Accessories</button>
-					</div>
-	</div>
-
-	<div id="zse-grid" class="scroll-mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 pb-6">
-							<article class="zse-card bg-white rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl transition-shadow overflow-hidden flex flex-col" data-category="Wedding" data-search="wedding save the dates 12 curated wedding save the dates picks &amp; designs worth exploring wedding">
-			<a href="https://zazzlefinds.netlify.app/wedding-save-the-dates.html" class="relative block overflow-hidden" style="aspect-ratio:1/1;background:linear-gradient(135deg,#fde8e4,#d9f3ef)">
-								<img src="https://rlv.zcache.com/modern_script_elegant_wedding_photo_save_the_date-r_w3utfp_1000.jpg" alt="Wedding Save the Dates" loading="lazy" onerror="this.style.display='none'" class="w-full h-full object-contain bg-white transition-transform duration-500 hover:scale-105">
-								<span class="absolute top-4 left-4 bg-white/95 border border-stone-200 text-stone-700 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Wedding</span>
-				<span class="absolute top-4 right-4 bg-amber-100 border border-amber-300 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">12 Curated Picks</span>
-			</a>
-			<div class="p-6 flex flex-col grow">
-				<h2 class="font-display text-xl md:text-xl font-bold leading-snug mb-5 grow">Wedding Save The Dates</h2>
-				<a href="https://zazzlefinds.netlify.app/wedding-save-the-dates.html" class="text-center w-full rounded-xl md:rounded-full py-4 text-base font-extrabold text-white shadow-lg shadow-rose-200 hover:-translate-y-0.5 transition-transform" style="background:linear-gradient(135deg,#FF6B5B,#14B8A6)">Explore Collection →</a>
-			</div>
-		</article>
-							<article class="zse-card bg-white rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl transition-shadow overflow-hidden flex flex-col" data-category="Lifestyle &amp; Accessories" data-search="wedding invitations wedding invitations lifestyle &amp; accessories">
-			<a href="https://zazzlefinds.netlify.app/wedding-invitations.html" class="relative block overflow-hidden" style="aspect-ratio:1/1;background:linear-gradient(135deg,#fde8e4,#d9f3ef)">
-								<span class="absolute top-4 left-4 bg-white/95 border border-stone-200 text-stone-700 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Lifestyle &amp; Accessories</span>
-				<span class="absolute top-4 right-4 bg-amber-100 border border-amber-300 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">11 Curated Picks</span>
-			</a>
-			<div class="p-6 flex flex-col grow">
-				<h2 class="font-display text-xl md:text-xl font-bold leading-snug mb-5 grow">Wedding Invitations</h2>
-				<a href="https://zazzlefinds.netlify.app/wedding-invitations.html" class="text-center w-full rounded-xl md:rounded-full py-4 text-base font-extrabold text-white shadow-lg shadow-rose-200 hover:-translate-y-0.5 transition-transform" style="background:linear-gradient(135deg,#FF6B5B,#14B8A6)">Explore Collection →</a>
-			</div>
-		</article>
-							<article class="zse-card bg-white rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl transition-shadow overflow-hidden flex flex-col" data-category="Lifestyle &amp; Accessories" data-search="gifts for mom gifts for mom lifestyle &amp; accessories">
-			<a href="https://zazzlefinds.netlify.app/gifts-for-mom.html" class="relative block overflow-hidden" style="aspect-ratio:1/1;background:linear-gradient(135deg,#fde8e4,#d9f3ef)">
-								<span class="absolute top-4 left-4 bg-white/95 border border-stone-200 text-stone-700 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">Lifestyle &amp; Accessories</span>
-				<span class="absolute top-4 right-4 bg-amber-100 border border-amber-300 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">7 Curated Picks</span>
-			</a>
-			<div class="p-6 flex flex-col grow">
-				<h2 class="font-display text-xl md:text-xl font-bold leading-snug mb-5 grow">Gifts For Mom</h2>
-				<a href="https://zazzlefinds.netlify.app/gifts-for-mom.html" class="text-center w-full rounded-xl md:rounded-full py-4 text-base font-extrabold text-white shadow-lg shadow-rose-200 hover:-translate-y-0.5 transition-transform" style="background:linear-gradient(135deg,#FF6B5B,#14B8A6)">Explore Collection →</a>
-			</div>
-		</article>
-			</div>
-
-	<p id="zse-empty" class="hidden text-center text-stone-500 py-16">No collections match your search. Try another keyword or category.</p>
+<body>
+<header class="top"><a class="brand" href="./">✦ Curated Finds</a><span class="back">1 Collections</span></header>
+<main class="wrap">
+<section class="hero">
+<span class="eyebrow">Storefront Hub · Updated November 25, 2026</span>
+<h1>Today's Bestseller Collections</h1>
+<p class="sub">Seasonal and trending finds, refreshed often. Pick a collection to see the top sellers.</p>
+<span class="promo">🏷️ SPECIAL PROMO DISCOUNT AVAILABLE ON ZAZZLE</span>
+<input class="search" id="q" type="search" placeholder="Search collections…" aria-label="Search collections">
 </section>
+<div class="hubgrid" id="hub"><a class="hubcard" href="personalized-thanksgiving-table-decor.html" data-t="personalized thanksgiving table decor thanksgiving table decor"><img src="https://rlv.zcache.com/eat_drink_and_be_thankful_thanksgiving_dinner_napkins-r_v3frkx_500.jpg?max_dim=1000" alt="Personalized Thanksgiving Table Decor" loading="lazy"><div class="b"><h3>Personalized Thanksgiving Table Decor</h3><span>Explore bestsellers →</span></div></a></div>
 
-<footer class="border-t border-stone-200 bg-white mt-16">
-	<div class="max-w-4xl mx-auto px-5 py-10 text-center text-sm text-stone-500">
-		<p><strong class="text-stone-700">Affiliate Disclosure:</strong> As a Zazzle Ambassador, we earn a referral commission on qualifying purchases made through our links at no additional cost to you.</p>
-		<p class="mt-3 text-xs text-stone-400">Prices and promotions on Zazzle change frequently. The final price, including any active discount, is always shown on Zazzle.</p>
-	</div>
-</footer>
-
+</main>
+<footer><p><strong>Affiliate Disclosure:</strong> This website contains affiliate links. If you click a link and make a purchase on Zazzle, we may earn a commission at no additional cost to you. We are independent curators and are not Zazzle.</p><p>Product details, prices, availability and promotions are controlled by Zazzle and the individual creators, and may change at any time. Please confirm all details on Zazzle before purchasing.</p><p>© 2026 Curated Finds</p></footer>
+<script type="application/json" id="ztpr-data">[{"slug":"personalized-thanksgiving-table-decor","title":"Personalized Thanksgiving Table Decor","keyword":"thanksgiving table decor","thumb":"https:\/\/rlv.zcache.com\/eat_drink_and_be_thankful_thanksgiving_dinner_napkins-r_v3frkx_500.jpg?max_dim=1000","count":14,"updated":"2026-11-25"}]</script>
 <script>
 (function(){
-	var cards=Array.prototype.slice.call(document.querySelectorAll('.zse-card'));
-	var pills=Array.prototype.slice.call(document.querySelectorAll('.zse-pill'));
-	var input=document.getElementById('zse-search');
-	var empty=document.getElementById('zse-empty');
-	var cat='all',q='';
-	function apply(){
-		var visible=0;
-		cards.forEach(function(card){
-			var okCat=(cat==='all'||card.getAttribute('data-category')===cat);
-			var okQ=(q===''||card.getAttribute('data-search').indexOf(q)>-1);
-			if(okCat&&okQ){
-				if(card.classList.contains('is-hidden')){card.classList.remove('is-hidden');card.style.animation='none';void card.offsetWidth;card.style.animation='';}
-				visible++;
-			}else{
-				card.classList.add('is-hidden');
-			}
-		});
-		if(cards.length>0){
-			if(visible===0){empty.classList.remove('hidden');}else{empty.classList.add('hidden');}
-		}
-	}
-	pills.forEach(function(p){
-		p.addEventListener('click',function(){
-			pills.forEach(function(x){x.classList.remove('active');});
-			p.classList.add('active');
-			cat=p.getAttribute('data-cat');
-			apply();
-		});
-	});
-	if(input){
-		input.addEventListener('input',function(){
-			q=input.value.toLowerCase().replace(/^\s+|\s+$/g,'');
-			apply();
-		});
-	}
+  var q=document.getElementById('q'),cards=document.querySelectorAll('.hubcard');
+  if(!q){return;}
+  q.addEventListener('input',function(){
+    var v=q.value.toLowerCase().trim();
+    for(var i=0;i<cards.length;i++){
+      cards[i].style.display=(!v||(cards[i].getAttribute('data-t')||'').indexOf(v)>-1)?'':'none';
+    }
+  });
 })();
 </script>
-<div id="zse-promo" class="md:hidden fixed inset-x-0 bottom-0 z-40 px-3" style="padding-bottom:calc(env(safe-area-inset-bottom,0px) + .75rem)">
-	<div class="flex items-center gap-2 rounded-2xl bg-white border border-emerald-200 shadow-2xl p-2.5 pl-4">
-		<span class="text-xs font-bold text-stone-800 grow leading-snug">🎁 Special Zazzle Promo Discount Active Today!</span>
-		<a href="#zse-grid" class="shrink-0 rounded-xl bg-emerald-500 text-white text-xs font-extrabold px-3.5 py-2.5">View Top Picks ↑</a>
-		<button type="button" id="zse-promo-x" aria-label="Dismiss promo bar" class="shrink-0 w-8 h-8 text-stone-400 text-2xl leading-none">&times;</button>
-	</div>
-</div>
-<script>
-(function(){
-	var bar=document.getElementById('zse-promo');
-	var x=document.getElementById('zse-promo-x');
-	if(!bar||!x){return;}
-	x.addEventListener('click',function(){
-		bar.parentNode.removeChild(bar);
-		document.body.classList.remove('pb-24');
-	});
-})();
-</script>
-		</body>
+</body>
 </html>
-		
